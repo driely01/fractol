@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:11:41 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/07 19:11:26 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/08 22:33:25 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@
 #include <mlx.h>
 #include <math.h>
 
-#define width 1200
-#define height 1200
-#define num_itr 80.0
+#define width 800
+#define height 800
+#define num_itr 100.0
+#define ZOOM 1.1
 
 typedef struct s_data {
 	void	*mlx;

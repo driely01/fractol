@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:19:02 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/07 18:45:51 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/08 22:34:38 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int destroy(t_data *data)
 	return (0);
 }
 
-double ft_abs(double x)
+long double ft_abs(long double x)
 {
 	if (x < 0)
 		return (-x);
@@ -54,12 +54,12 @@ double ft_abs(double x)
 		return (x);
 }
 
-int	juliaset(double x, double y, double comp_one, double comp_two)
+int	juliaset(long double x, long double y, long double comp_one, long double comp_two)
 {
 	int		n;
-	double tmp;
-	double	a;
-	double	b;
+	long double tmp;
+	long double	a;
+	long double	b;
 	
 	n = 0;
 	a = x;
@@ -76,26 +76,41 @@ int	juliaset(double x, double y, double comp_one, double comp_two)
 	return (n);
 }
 
-int	mandlbrotset(double x, double y)
+int	mandlbrotset(long double x, long double y)
 {
-	int		n;
-	double tmp;
-	double	a;
-	double	b;
-	
-	n = 0;
-	a = 0;
-	b = 0;
-	while (n < num_itr) {
-		tmp = a;
-		a = a * a - b * b + x;
-		b = 2 * tmp * b + y;
-		if (sqrt(a*a + b*b) > 2.0)
-			break ;
-		n++;
-	}
-	return (n);
+	int n = 0;
+  long double a = x;
+  long double b = y;
+  while (n < num_itr) {
+    long double tmp = a;
+    a = a * a - b * b + x;
+    b = 2 * tmp * b + y;
+    if (sqrt(a * a + b * b) > 2.0)
+      break;
+    n++;
+  }
+  return n;
 }
+// int	mandlbrotset(long double x, long double y)
+// {
+// 	int		n;
+// 	long double tmp;
+// 	long double	a;
+// 	long double	b;
+	
+// 	n = 0;
+// 	a = 0;
+// 	b = 0;
+// 	while (n < num_itr) {
+// 		tmp = a;
+// 		a = a * a - b * b + x;
+// 		b = 2 * tmp * b + y;
+// 		if (sqrt(a*a + b*b) > 2.0)
+// 			break ;
+// 		n++;
+// 	}
+// 	return (n);
+// }
 
 int	create_trgb(int t, int r, int g, int b)
 {
@@ -104,8 +119,8 @@ int	create_trgb(int t, int r, int g, int b)
 
 void	draw_mandlbrotset(t_data *data, int destroy)
 {
-	double	x;
-	double	y;
+	long double	x;
+	long double	y;
 	// char	*color;
 	int 	p_color;
 	int		n;
@@ -127,7 +142,7 @@ void	draw_mandlbrotset(t_data *data, int destroy)
 			// else
 			// 	*(int *)color=  create_trgb(0, p_color / n, p_color / n, p_color / n);
 			if (n < num_itr)
-				my_mlx_pixel_put(data, x, y, p_color * n);
+				my_mlx_pixel_put(data, x, y, p_color);
 			else
 				my_mlx_pixel_put(data, x, y, p_color);
 			y++;
@@ -136,11 +151,12 @@ void	draw_mandlbrotset(t_data *data, int destroy)
 	}
 	mlx_put_image_to_window(data->mlx, data->mlx_win, data->img, 0, 0);
 }
-void	draw_juliaset(t_data *data, int destroy, double comp_one, double comp_two)
+
+void	draw_juliaset(t_data *data, int destroy, long double comp_one, long double comp_two)
 {
-	double	x;
-	double	y;
-	char	*color;
+	long double	x;
+	long double	y;
+	// char	*color;
 	int 	p_color;
 	int		n;
 	
@@ -155,16 +171,16 @@ void	draw_juliaset(t_data *data, int destroy, double comp_one, double comp_two)
 		while (y < height) {
 			n = juliaset((x - width / 2 + data->left_right)/data->zoom,
 				(y - height / 2 + data->top_down)/data->zoom, comp_one, comp_two);
-			p_color = 255 - (n / num_itr) * 255;
-			color = data->addr + ((int)x  * (data->bits_per_pixel / 8) + (int)(y)  * data->line_length);
-			if (n < num_itr)
-				*(int *)color=  create_trgb(0, p_color, p_color, p_color);
-			else
-				*(int *)color=  create_trgb(0, p_color, p_color, p_color);
-			// if (n <= num_itr)
-			// 	my_mlx_pixel_put(data, x, y, p_color * num_itr);
+			p_color = (n / num_itr) * 255;
+			// color = data->addr + ((int)x  * (data->bits_per_pixel / 8) + (int)(y)  * data->line_length);
+			// if (n < num_itr)
+			// 	*(int *)color=  create_trgb(0, p_color, p_color, p_color);
 			// else
-			// 	my_mlx_pixel_put(data, x, y, p_color * num_itr);
+				// *(int *)color=  create_trgb(0, p_color, p_color, p_color);
+			if (n <= num_itr)
+				my_mlx_pixel_put(data, x, y, p_color *  num_itr);
+			else
+				my_mlx_pixel_put(data, x, y, p_color);
 			y++;
 		}
 		x++;
@@ -174,14 +190,26 @@ void	draw_juliaset(t_data *data, int destroy, double comp_one, double comp_two)
 
 int mouse_zoom(int mousecode, int x, int y, t_data *data)
 {
-	(void)x;
-	(void)y;
+
 	if (mousecode != 4 && mousecode != 5)
 		return (0);
 	if (mousecode == 4)
-		data->zoom *= 1.1;
+	{
+		x = x - (width / 2);
+		y = y - (width / 2);
+		data->zoom *= ZOOM;
+		data->left_right *= ZOOM;
+		data->top_down *= ZOOM;
+		data->left_right += x * (ZOOM - 1);
+		data->top_down += y * (ZOOM - 1);
+		
+	}
 	else if (mousecode == 5)
-		data->zoom /= 1.1;
+	{
+		data->zoom /= ZOOM;
+		data->left_right /= ZOOM;
+		data->top_down /= ZOOM;
+	}
 	if (!ft_strcmp(data->type, "Mandlbrot"))
 		draw_mandlbrotset(data, 1);
 	else if (!ft_strcmp(data->type, "Julia"))
@@ -196,9 +224,7 @@ int key_move(int keycode, t_data *data)
 		mlx_destroy_image(data->mlx, data->img);
 		exit(0);
 	}
-	if (keycode == 24)
-		data->zoom /= 1.1;
-	else if (keycode == 124)
+	if (keycode == 124)
 		data->left_right += 20;
 	else if (keycode == 123)
 		data->left_right += -20;
