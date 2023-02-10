@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:52:27 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/07 16:20:54 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/10 16:39:15 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,29 +26,47 @@ static void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
-void how_to_pass_param()
+void	how_to_pass_param(void)
 {
-	ft_putstr_fd("###############################################################################\n", 1);
-	ft_putstr_fd("#                                                                             #\n", 1);
-	ft_putstr_fd("# >   Invalid Parameter Try Again                                             #\n", 1);
-	ft_putstr_fd("#                                                                             #\n", 1);
-	ft_putstr_fd("# >   If you need to execute a Mandlnrotset fractal you execute af follow:    #\n", 1);
-	ft_putstr_fd("#                                                                             #\n", 1);
-	ft_putstr_fd("# >   ./exec <Mandlbrot>                                                      #\n", 1);
-	ft_putstr_fd("#                                                                             #\n", 1);
-	ft_putstr_fd("# >   If you need to execute a Julia fractal you execute af follow:           #\n", 1);
-	ft_putstr_fd("#                                                                             #\n", 1);
-	ft_putstr_fd("# >   ./exec <Julia> <first const> <second const>                             #\n", 1);
-	ft_putstr_fd("#                                                                             #\n", 1);
-	ft_putstr_fd("# >   for examles:                                                            #\n", 1);
-	ft_putstr_fd("#                                                                             #\n", 1);
-	ft_putstr_fd("# >   ./exec Julia -0.72689 0.1889                                            #\n", 1);
-	ft_putstr_fd("#                                                                             #\n", 1);
-	ft_putstr_fd("###############################################################################\n", 1);
+	ft_putstr_fd("####################################\
+###########################################\n", 1);
+	ft_putstr_fd("#                                      \
+                                       #\n", 1);
+	ft_putstr_fd("# >   Invalid Parameter Try Again     \
+                                        #\n", 1);
+	ft_putstr_fd("#                                      \
+                                       #\n", 1);
+	ft_putstr_fd("# >   If you need to execute a Mandlnro\
+tset fractal you execute af follow:    #\n", 1);
+	ft_putstr_fd("#                                       \
+                                      #\n", 1);
+	ft_putstr_fd("# >   ./exec <Mandlbrot>                \
+                                      #\n", 1);
+	ft_putstr_fd("#                                       \
+                                      #\n", 1);
+	ft_putstr_fd("# >   If you need to execute a Julia frac\
+tal you execute af follow:           #\n", 1);
+	ft_putstr_fd("#                                        \
+                                     #\n", 1);
+	ft_putstr_fd("# >   ./exec <Julia> <first const> <second\
+ const>                             #\n", 1);
+	ft_putstr_fd("#                                         \
+                                    #\n", 1);
+	ft_putstr_fd("# >   for examles:                        \
+                                    #\n", 1);
+	ft_putstr_fd("#                                         \
+                                    #\n", 1);
+	ft_putstr_fd("# >   ./exec Julia -0.72689 0.1889        \
+                                    #\n", 1);
+	ft_putstr_fd("#                                         \
+                                    #\n", 1);
+	ft_putstr_fd("##########################################\
+#####################################\n", 1);
 	exit(1);
 }
 
-static double	ft_convert(const char **str, int *sign, double *res, double *old)
+static double	ft_convert(const char **str, int *sign,
+				double *res, double *old)
 {
 	*old = *res;
 	*res *= 10;
@@ -63,7 +81,7 @@ static double	ft_calculater(const char **str, int sign)
 {
 	double	res;
 	double	old;
-    int     counter;
+	int		counter;
 
 	res = 0;
 	counter = 1;
@@ -72,7 +90,7 @@ static double	ft_calculater(const char **str, int sign)
 		ft_convert(str, &sign, &res, &old);
 		(*str)++;
 	}
-    if (*(*str) == '.')
+	if (*(*str) == '.')
 	{
 		(*str)++;
 		if (*(*str) < '0' || *(*str) > '9')
@@ -84,7 +102,7 @@ static double	ft_calculater(const char **str, int sign)
 			(*str)++;
 		}
 	}
-    return ((res * sign) / counter);
+	return ((res * sign) / counter);
 }
 
 double	ft_atof(const char *str)
@@ -96,7 +114,8 @@ double	ft_atof(const char *str)
 	sign = 1;
 	while (str[i])
 	{
-		if ((str[i] < '0' || str[i] > '9') && str[i] != '.' && str[i] != '+' && str[i] != '-')
+		if ((str[i] < '0' || str[i] > '9') && str[i] != '.' && str[i] != '+'
+			&& str[i] != '-')
 			how_to_pass_param();
 		i++;
 	}

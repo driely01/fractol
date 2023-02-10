@@ -6,11 +6,12 @@
 #    By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 11:38:55 by del-yaag          #+#    #+#              #
-#    Updated: 2023/02/07 19:09:12 by del-yaag         ###   ########.fr        #
+#    Updated: 2023/02/10 16:49:34 by del-yaag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = fractol.c ft_atof.c
+SRC = fractol.c ft_atof.c juliaset.c mandlbrotset.c \
+		events.c
 
 OBJ = $(SRC:.c=.o)
 
