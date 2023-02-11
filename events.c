@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 16:32:04 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/10 16:48:25 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/11 23:08:28 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,18 @@ int	destroy(t_data *data)
 	return (0);
 }
 
+void	change_color(t_data *data)
+{
+	if (data->set_color == 4)
+		data->set_color = 1;
+	if (data->set_color == 1)
+		palette_org(data);
+	else if (data->set_color == 2)
+		palette_one(data);
+	else if (data->set_color == 3)
+		palette_two(data);
+}
+
 int	key_move(int keycode, t_data *data)
 {
 	if (keycode == 53)
@@ -26,7 +38,12 @@ int	key_move(int keycode, t_data *data)
 		mlx_destroy_image(data->mlx, data->img);
 		exit(0);
 	}
-	if (keycode == 124)
+	else if (keycode == 48)
+	{
+		data->set_color += 1;
+		change_color(data);
+	}
+	else if (keycode == 124)
 		data->left_right += 20;
 	else if (keycode == 123)
 		data->left_right += -20;

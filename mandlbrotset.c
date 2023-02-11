@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 16:19:58 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/10 17:18:55 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/11 23:06:08 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,34 +39,60 @@ int	mandlbrotset(long double x, long double y)
 	return (n);
 }
 
+// void	colors(int n, t_data *data)
+// {
+// 	// data->p_color = (n / NUM_ITR) * 255;
+// 	if (n < (NUM_ITR * 10 / 100))
+// 		return (0x29132e);
+// 	else if (n < (NUM_ITR * 40 / 100))
+// 		return (0xde004e);
+// 	else if (n < (NUM_ITR * 60 / 100))
+// 		return (0x860029);
+// 	else if (n < (NUM_ITR * 80 / 100))
+// 		return (0xf887ff);
+// 	else
+// 		return (0x321450);
+// 		// return (0x29132e);
+// }
+
+void	palette_three(t_data *data)
+{
+	if (data->c_itr < (NUM_ITR * 10 / 100))
+		data->p_color = 0x29132e;
+	else if (data->c_itr < (NUM_ITR * 40 / 100))
+		data->p_color = 0xf887ff;
+	else if (data->c_itr < (NUM_ITR * 60 / 100))
+		data->p_color = 0xde004e;
+	else if (data->c_itr < (NUM_ITR * 80 / 100))
+		data->p_color = 0x860029;
+	else
+		data->p_color = 0x321450;
+}
+
 void	draw_mandlbrotset(t_data *data, int destroy)
 {
 	long double	x;
 	long double	y;
-	char		*color;
-	double		p_color;
-	int			n;
 
 	if (destroy == 1)
 		mlx_destroy_image(data->mlx, data->img);
 	data->img = mlx_new_image(data->mlx, 1200, 1200);
 	data->addr = mlx_get_data_addr(data->img, &data->bits_per_pixel,
 			&data->line_length, &data->endian);
-	x = 0;
-	while (x < WIDTH)
+	x = -1;
+	while (++x < WIDTH)
 	{
-		y = 0;
-		while (y < HEIGHT)
+		y = -1;
+		while (++y < HEIGHT)
 		{
-			n = mandlbrotset((x - WIDTH / 2 + data->left_right) / data->zoom,
-					(y - HEIGHT / 2 + data->top_down) / data->zoom);
-			p_color = (n / NUM_ITR) * 255;
-			color = data->addr + ((int)x * (data->bits_per_pixel / 8)
+			data->c_itr = mandlbrotset((x - WIDTH / 2 + data->left_right)
+					/ data->zoom, (y - HEIGHT / 2 + data->top_down)
+					/ data->zoom);
+			data->color = data->addr + ((int)x * (data->bits_per_pixel / 8)
 					+ (int)y * data->line_length);
-			*(int *)color = create_trgb(0, p_color, p_color, p_color);
-			y++;
+			change_color(data);
+			*(int *)data->color = data->p_color;
 		}
-		x++;
 	}
 	mlx_put_image_to_window(data->mlx, data->mlx_win, data->img, 0, 0);
 }

@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:19:02 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/10 16:48:19 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/11 22:32:16 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int main(int argc, char **argv)
 	t_data	data;
 
 	if (argc > 1)
-	{	
+	{
 		if (ft_strcmp(argv[1], "Julia") && ft_strcmp(argv[1], "Mandlbrot"))
 			how_to_pass_param();
 		if (argc == 4)
@@ -70,6 +70,7 @@ int main(int argc, char **argv)
 		data.zoom = WIDTH / 4;
 		data.left_right = 0;
 		data.top_down = 0;
+		data.set_color = 1;
 		data.mlx = mlx_init();
 		data.mlx_win = mlx_new_window(data.mlx, WIDTH, HEIGHT, "Fractol");
 		if (!ft_strcmp(argv[1], "Julia"))

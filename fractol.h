@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:11:41 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/10 16:50:01 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/11 23:42:13 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 # define WIDTH 800
 # define HEIGHT 800
-# define NUM_ITR 80.0
+# define NUM_ITR 100.0
 # define ZOOM 1.1
 
 typedef struct s_data {
@@ -36,6 +36,10 @@ typedef struct s_data {
 	double	top_down;
 	double	f_const;
 	double	s_const;
+	int		p_color;
+	char	*color;
+	int		c_itr;
+	int		set_color;
 }	t_data;
 
 int		create_trgb(int t, int r, int g, int b);
@@ -51,4 +55,9 @@ int		destroy(t_data *data);
 int		key_move(int keycode, t_data *data);
 int		mouse_zoom(int mousecode, int x, int y, t_data *data);
 int		ft_strcmp(const char *s1, const char *s2);
+void	palette_one(t_data *data);
+void	palette_org(t_data *data);
+void	palette_two(t_data *data);
+void	change_color(t_data *data);
+
 #endif
