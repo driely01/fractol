@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 22:11:53 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/11 23:19:40 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:17:51 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,28 @@ void	palette_two(t_data *data)
 void	palette_org(t_data *data)
 {
 	data->p_color = 255 - (data->c_itr / NUM_ITR) * 255;
+}
+
+void	palette_three(t_data *data)
+{
+	if (data->c_itr < (NUM_ITR * 10 / 100))
+		data->p_color = 0x222035 * ((data->c_itr / NUM_ITR) * 255);
+	else if (data->c_itr < (NUM_ITR * 20 / 100))
+		data->p_color = 0xdefe47 / ((data->c_itr / NUM_ITR) * 255);
+	else if (data->c_itr < (NUM_ITR * 30 / 100))
+		data->p_color = 0xff6e27 * ((data->c_itr / NUM_ITR) * 255);
+	else if (data->c_itr < (NUM_ITR * 40 / 100))
+		data->p_color = 0x120458 / ((data->c_itr / NUM_ITR) * 255);
+	else if (data->c_itr < (NUM_ITR * 50 / 100))
+		data->p_color = 0x393f5f * ((data->c_itr / NUM_ITR) * 255);
+	else if (data->c_itr < (NUM_ITR * 60 / 100))
+		data->p_color = 0x351409 / ((data->c_itr / NUM_ITR) * 255);
+	else if (data->c_itr < (NUM_ITR * 70 / 100))
+		data->p_color = 0xfe00fe * ((data->c_itr / NUM_ITR) * 255);
+	else if (data->c_itr < (NUM_ITR * 80 / 100))
+		data->p_color = 0x00b3fe / ((data->c_itr / NUM_ITR) * 255);
+	else if (data->c_itr < (NUM_ITR * 90 / 100))
+		data->p_color = 0xe2dddf * ((data->c_itr / NUM_ITR) * 255);
+	else
+		data->p_color = 0x0013ee / ((data->c_itr / NUM_ITR) * 255);
 }

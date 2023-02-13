@@ -6,14 +6,14 @@
 #    By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 11:38:55 by del-yaag          #+#    #+#              #
-#    Updated: 2023/02/11 22:13:09 by del-yaag         ###   ########.fr        #
+#    Updated: 2023/02/13 18:33:33 by del-yaag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = fractol.c ft_atof.c juliaset.c mandlbrotset.c \
-		events.c colors.c
+		events.c colors.c burningship.c fractol_useful_utils.c
 
-OBJ = $(SRC:.c=.o)
+OBJ =  $(SRC:.c=.o)
 
 NAME = fractol
 
@@ -23,8 +23,11 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJ) fractol.h
+$(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+
+%.o: %.c fractol.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJ)

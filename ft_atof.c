@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:52:27 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/10 16:39:15 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:17:43 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ void	how_to_pass_param(void)
                                         #\n", 1);
 	ft_putstr_fd("#                                      \
                                        #\n", 1);
-	ft_putstr_fd("# >   If you need to execute a Mandlnro\
-tset fractal you execute af follow:    #\n", 1);
+	ft_putstr_fd("# >   If you need to execute a Mandelnro\
+tset fractal you execute af follow:   #\n", 1);
 	ft_putstr_fd("#                                       \
                                       #\n", 1);
-	ft_putstr_fd("# >   ./exec <Mandlbrot>                \
-                                      #\n", 1);
+	ft_putstr_fd("# >   ./exec <Mandelbrot>                \
+                                     #\n", 1);
 	ft_putstr_fd("#                                       \
                                       #\n", 1);
 	ft_putstr_fd("# >   If you need to execute a Julia frac\
