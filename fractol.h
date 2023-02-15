@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:11:41 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/13 18:33:11 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/15 18:50:10 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 # define WIDTH 800
 # define HEIGHT 800
-# define NUM_ITR 100.0
+# define NUM_ITR 40.0
 # define ZOOM 1.1
 
 typedef struct s_data {
@@ -67,5 +67,8 @@ void		hooks_function(t_data *data);
 void		value_assignment(t_data *data);
 void		fill_args_and_check_errors(int argc, char **argv, t_data *data);
 void		burning_or_mandel_or_julia(int argc, t_data *data, int choice);
+void		draw_sinusoidal_mandelbrot(t_data *data, int destroy);
+void		switch_fractals(t_data *data);
+void		draw_fractals(t_data *data);
 
 #endif

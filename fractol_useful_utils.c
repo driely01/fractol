@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 17:24:14 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/13 17:24:59 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/15 18:44:17 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	hooks_function(t_data *data)
 {
 	mlx_hook(data->mlx_win, 17, 0, destroy, data);
 	mlx_mouse_hook(data->mlx_win, mouse_zoom, data);
-	mlx_key_hook(data->mlx_win, key_move, data);
+	mlx_hook(data->mlx_win, 2, 0, key_move, data);
 }
 
 void	value_assignment(t_data *data)

@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   burningship.c                                      :+:      :+:    :+:   */
+/*   bonus_of_bonus_part.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/12 18:46:10 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/15 16:07:45 by del-yaag         ###   ########.fr       */
+/*   Created: 2023/02/15 15:49:55 by del-yaag          #+#    #+#             */
+/*   Updated: 2023/02/15 18:41:21 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-long double	ft_abs(long double x)
-{
-	if (x < 0)
-		return (-x);
-	else
-		return (x);
-}
-
-int	burningship(long double x, long double y)
+//  Z(n + 1) = Zn * sin(Zn)
+static int	sinusoidal_mandelbrot(long double x, long double y)
 {
 	int			n;
 	long double	a;
@@ -33,16 +26,16 @@ int	burningship(long double x, long double y)
 	while (n < NUM_ITR)
 	{
 		tmp = a;
-		a = ft_abs(a * a - b * b + x);
-		b = ft_abs(2 * tmp * b) + y;
-		if (sqrt(a * a + b * b) > 2.0)
+		a = ((tmp) * sin(tmp) * cosh(b) - (b) * cos(tmp) * sinh(b)) + x;
+		b = ((tmp) * cos(tmp) * sinh(b) + (b) * sin(tmp) * cosh(b)) + y;
+		if (sqrt(a * a + b * b) > 20.0)
 			break ;
 		n++;
 	}
 	return (n);
 }
 
-void	draw_burningship(t_data *data, int destroy)
+void	draw_sinusoidal_mandelbrot(t_data *data, int destroy)
 {
 	long double	x;
 	long double	y;
@@ -58,8 +51,9 @@ void	draw_burningship(t_data *data, int destroy)
 		y = -1;
 		while (++y < HEIGHT)
 		{
-			data->c_itr = burningship((x - WIDTH / 2 + data->left_right)
-					/ data->zoom, (y - HEIGHT / 2 + data->top_down)
+			data->c_itr = sinusoidal_mandelbrot((x - WIDTH / 2
+						+ data->left_right) / data->zoom,
+					(y - HEIGHT / 2 + data->top_down)
 					/ data->zoom);
 			data->color = data->addr + ((int)x * (data->bits_per_pixel / 8)
 					+ (int)y * data->line_length);

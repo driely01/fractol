@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 16:16:11 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/11 23:07:18 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:09:27 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,29 @@ void	draw_juliaset(t_data *data, int destroy,
 	}
 	mlx_put_image_to_window(data->mlx, data->mlx_win, data->img, 0, 0);
 }
+
+// int	juliaset(long double x, long double y,
+// 		long double comp_one, long double comp_two)
+// {
+// 	int			n;
+// 	long double	tmp;
+// 	long double	a;
+// 	long double	b;
+
+// 	n = 0;
+// 	a = x;
+// 	b = y;
+// 	while (n < NUM_ITR)
+// 	{
+// 		tmp = a;
+// 		a = a * a - b * b + comp_one;
+// 		b = 2 * tmp * b + comp_two;
+// 		if (sqrt(a * a + b * b) > 2.0)
+// 			break ;
+// 		n++;
+// 	}
+// 	return (n);
+// }
 
 int	juliaset(long double x, long double y,
 		long double comp_one, long double comp_two)

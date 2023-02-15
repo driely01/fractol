@@ -6,12 +6,13 @@
 #    By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/06 11:38:55 by del-yaag          #+#    #+#              #
-#    Updated: 2023/02/13 18:33:33 by del-yaag         ###   ########.fr        #
+#    Updated: 2023/02/15 18:56:24 by del-yaag         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = fractol.c ft_atof.c juliaset.c mandlbrotset.c \
-		events.c colors.c burningship.c fractol_useful_utils.c
+		events.c colors.c burningship.c fractol_useful_utils.c \
+		bonus_of_bonus_part.c event_utils.c
 
 OBJ =  $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 16:19:58 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/13 14:44:54 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/02/15 18:39:29 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	mandlbrotset(long double x, long double y)
 		tmp = a;
 		a = a * a - b * b + x;
 		b = 2 * tmp * b + y;
-		if (sqrt(a * a + b * b) > 2.0)
+		if (sqrt(a * a + b * b) > 20.0)
 			break ;
 		n++;
 	}
