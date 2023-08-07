@@ -22,5 +22,5 @@
 
 > Burningship
 
-<img width="400" alt="Screen Shot 2023-08-06 at 7 06 29 PM" src="https://github.com/driely01/fractol/assets/41493879/1207a014-9bde-411f-89e3-dda180c95381">
 <img width="400" alt="Screen Shot 2023-08-06 at 7 06 39 PM" src="https://github.com/driely01/fractol/assets/41493879/0d7dc0ce-de22-4563-81ed-eb5453e25b29">
+<img width="400" alt="Screen Shot 2023-08-06 at 7 06 29 PM" src="https://github.com/driely01/fractol/assets/41493879/1207a014-9bde-411f-89e3-dda180c95381">
