@@ -12,8 +12,8 @@
 
 > Julia Set
 
-<img width="400" alt="Screen Shot 2023-08-06 at 7 03 20 PM" src="https://github.com/driely01/fractol/assets/41493879/fd0a21c5-fd22-4b3b-8e31-061eac8cf94d">
 <img width="400" alt="Screen Shot 2023-08-06 at 7 03 39 PM" src="https://github.com/driely01/fractol/assets/41493879/0a6974f4-a8b4-44cf-b755-2d4df31f9601">
+<img width="400" alt="Screen Shot 2023-08-06 at 7 03 20 PM" src="https://github.com/driely01/fractol/assets/41493879/fd0a21c5-fd22-4b3b-8e31-061eac8cf94d">
 
 > Fractal
 
