@@ -4,6 +4,7 @@
  2. Julia Set: [Check it out](https://en.wikipedia.org/wiki/Julia_set)
  3. Burning Ship: [Check it out](https://en.wikipedia.org/wiki/Burning_Ship_fractal)
  4. Burning Ship: [Check it out](http://paulbourke.net/fractals/burnship/)
+ 5. Fractal Equations: [**Check it out**](https://mathcurve.com/fractals/fractals.shtml)
 
 > Mandelbrot Set
 
