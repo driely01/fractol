@@ -1,4 +1,10 @@
 # fractol
+ **Resources**
+ 1. Mandelbrot Set: [Check it out](https://en.wikipedia.org/wiki/Mandelbrot_set)
+ 2. Julia Set: [Check it out](https://en.wikipedia.org/wiki/Julia_set)
+ 3. Burning Ship: [Check it out](https://en.wikipedia.org/wiki/Burning_Ship_fractal)
+ 4. Burning Ship: [Check it out](http://paulbourke.net/fractals/burnship/)
+
 > Mandelbrot Set
 
 <img width="400" alt="Screen Shot 2023-08-06 at 6 59 13 PM" src="https://github.com/driely01/fractol/assets/41493879/22d31142-12bb-4b63-a28c-5511633c60ce">
