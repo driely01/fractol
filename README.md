@@ -1,7 +1,8 @@
 # fractol
 
 **About the project**
-First thing you need to know what is `fractal` and their equations like `mandelbrot set` `julia set` `burning ship` and so on. the idea of this project is to draw a computer graphical fractal using `mlx` or `minilibx` `minilibx 42` library *link in Resources* like `Mandelbrot` Set and `julia Set` and after that you can draw any fractal you want, the main idea is how to use the graphic library and learning about its functions and how they work. 
+First thing you need to know what is `fractal` and their equations like `mandelbrot set` `julia set` `burning ship` and so on. the idea of this project is to draw a computer graphical fractal using `mlx` or `minilibx` `minilibx 42` library *link in Resources* like `Mandelbrot` Set and `julia Set` and after that you can draw any fractal you want, the main idea is how to use the graphic library and learning about its functions and how they work.
+```https://cdn.intra.42.fr/pdf/pdf/93171/en.subject.pdf```
 
  **Resources**
  1. Mandelbrot Set: [Check it out](https://en.wikipedia.org/wiki/Mandelbrot_set)
