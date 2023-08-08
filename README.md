@@ -41,7 +41,9 @@ https://www.uaa.alaska.edu/depts/planetarium/_documents/fractalpacks-educatorsgu
 <img width="400" alt="Screen Shot 2023-08-06 at 7 03 39 PM" src="https://github.com/driely01/fractol/assets/41493879/0a6974f4-a8b4-44cf-b755-2d4df31f9601">
 <img width="400" alt="Screen Shot 2023-08-06 at 7 03 20 PM" src="https://github.com/driely01/fractol/assets/41493879/fd0a21c5-fd22-4b3b-8e31-061eac8cf94d">
 
-> Burningship
+#### Burning Ship 
+> Burningship The Burning Ship Fractal is a slight variant on the Mandelbrot Set Fractal.
+The basic Mandelbrot Fractal formula is z=z^2+c. The Burning Ship Fractal formula is z=abs(z)^2+c.
 
 <img width="400" alt="Screen Shot 2023-08-06 at 7 06 29 PM" src="https://github.com/driely01/fractol/assets/41493879/1207a014-9bde-411f-89e3-dda180c95381">
 <img width="400" alt="Screen Shot 2023-08-06 at 7 06 39 PM" src="https://github.com/driely01/fractol/assets/41493879/0d7dc0ce-de22-4563-81ed-eb5453e25b29">
