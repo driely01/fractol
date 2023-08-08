@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:19:02 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/15 18:39:13 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/08/08 16:48:41 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ int	main(int argc, char **argv)
 		hooks_function(&data);
 		mlx_loop(data.mlx);
 	}
+	else
+		how_to_pass_param();
 	return (0);
 }
