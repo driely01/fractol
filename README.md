@@ -18,7 +18,7 @@ https://cdn.intra.42.fr/pdf/pdf/93171/en.subject.pdf
  7. Minilibx: [Check it out](https://harm-smits.github.io/42docs/libs/minilibx)
 
 > Mandelbrot Set
-
+The term Mandelbrot set is used to refer both to a general class of fractal sets and to a particular instance of such a set. In general, a Mandelbrot set marks the set of points in the complex plane such that the corresponding Julia set is connected and not computable.
 <img width="400" alt="Screen Shot 2023-08-06 at 6 59 13 PM" src="https://github.com/driely01/fractol/assets/41493879/22d31142-12bb-4b63-a28c-5511633c60ce">
 <img width="400" alt="Screen Shot 2023-08-06 at 6 59 22 PM" src="https://github.com/driely01/fractol/assets/41493879/6aea86e3-37ab-49b3-b204-2ed636e4db02">
 
