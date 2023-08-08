@@ -8,6 +8,11 @@ First thing you need to know what is `fractal` and their equations like `mandelb
 ```
 https://cdn.intra.42.fr/pdf/pdf/93171/en.subject.pdf
 ```
+> Useful book
+
+```
+https://www.uaa.alaska.edu/depts/planetarium/_documents/fractalpacks-educatorsguide.pdf
+```
 
  **Resources**
  1. Mandelbrot Set: [Check it out](https://en.wikipedia.org/wiki/Mandelbrot_set)
