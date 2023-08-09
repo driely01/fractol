@@ -39,7 +39,10 @@ https://www.uaa.alaska.edu/depts/planetarium/_documents/fractalpacks-educatorsgu
 
 <img width="400" alt="Screen Shot 2023-08-09 at 4 54 23 PM" src="https://github.com/driely01/fractol/assets/41493879/dd8efaf6-e243-4f73-b4aa-cfd0f9710009">
 <img width="400" alt="Screen Shot 2023-08-09 at 4 57 13 PM" src="https://github.com/driely01/fractol/assets/41493879/8d0aa45e-c796-4474-a485-b6f3b8e59d04">
-<img width="400" alt="Screen Shot 2023-08-09 at 4 58 52 PM" src="https://github.com/driely01/fractol/assets/41493879/2a397261-ed86-42ae-ad3c-f7178fc26283">
+<img width="200" alt="Screen Shot 2023-08-09 at 4 58 52 PM" src="https://github.com/driely01/fractol/assets/41493879/2a397261-ed86-42ae-ad3c-f7178fc26283">
+<img width="200" alt="Screen Shot 2023-08-09 at 4 54 36 PM" src="https://github.com/driely01/fractol/assets/41493879/715792fb-a2d2-4828-b158-89d737f1d1cf">
+<img width="200" alt="Screen Shot 2023-08-09 at 5 03 53 PM" src="https://github.com/driely01/fractol/assets/41493879/2204df60-6612-45c9-aecd-a0ab2103eb29">
+<img width="200" alt="Screen Shot 2023-08-09 at 5 05 10 PM" src="https://github.com/driely01/fractol/assets/41493879/a32275be-95a5-4116-bb73-f202e6e472b3">
 
 #### Burning Ship 
 > Burningship The Burning Ship Fractal is a slight variant on the Mandelbrot Set Fractal.
