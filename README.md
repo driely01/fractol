@@ -60,3 +60,5 @@ https://fractalfoundation.org/OFC/OFC-5-5.html
 
 <img width="400" alt="Screen Shot 2023-08-09 at 4 51 38 PM" src="https://github.com/driely01/fractol/assets/41493879/a243677b-5dc5-4d13-a810-8963340da363">
 <img width="400" alt="Screen Shot 2023-08-09 at 4 52 14 PM" src="https://github.com/driely01/fractol/assets/41493879/8bf02871-8d4e-409a-ac9e-8baa4eb500bf">
+
+https://github.com/driely01/fractol/assets/41493879/a67131a0-94c5-48ac-af41-5ff22c3db1ce
