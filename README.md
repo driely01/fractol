@@ -1,8 +1,7 @@
 # fractol
 
-<img width="400" alt="Screen Shot 2023-08-08 at 5 06 25 PM" src="https://github.com/driely01/fractol/assets/41493879/12682b0e-b64a-49fb-8521-56939762cf0c">
-
-<img width="400" alt="Screen Shot 2023-08-08 at 5 16 55 PM" src="https://github.com/driely01/fractol/assets/41493879/0026c957-d13f-4a3a-9640-a986f9f2cca5">
+<img width="664" alt="Screen Shot 2023-08-09 at 4 42 34 PM" src="https://github.com/driely01/fractol/assets/41493879/b12970c4-4e7d-471c-b420-99c8ebc2346e">
+<img width="664" alt="Screen Shot 2023-08-09 at 4 42 54 PM" src="https://github.com/driely01/fractol/assets/41493879/e7b37a16-80c5-41cd-86d6-433d3a1c7ca0">
 
 **About the project**
 
