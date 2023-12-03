@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 22:11:53 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/08/08 16:37:12 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/12/03 14:23:19 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,15 @@ void	palette_two(t_data *data)
 
 void	palette_org(t_data *data)
 {
-	data->p_color = 255 - (data->c_itr / NUM_ITR) * 255;
+	data->p_color = (255 - (data->c_itr / NUM_ITR) * 255);
+}
+
+void	palette_cos(t_data *data)
+{
+	data->p_color = (255 - (data->c_itr / NUM_ITR) * 255)
+		/ (sin(data->c_itr / NUM_ITR)
+			* sin(data->c_itr / NUM_ITR)
+			* tan(data->c_itr / NUM_ITR));
 }
 
 void	palette_three(t_data *data)

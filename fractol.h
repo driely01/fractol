@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:11:41 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/02/15 18:50:10 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/12/03 14:44:52 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 # define WIDTH 800
 # define HEIGHT 800
-# define NUM_ITR 40.0
+# define NUM_ITR 400.0
 # define ZOOM 1.1
 
 typedef struct s_data {
@@ -56,6 +56,7 @@ int			mouse_zoom(int mousecode, int x, int y, t_data *data);
 int			ft_strcmp(const char *s1, const char *s2);
 void		palette_one(t_data *data);
 void		palette_org(t_data *data);
+void		palette_cos(t_data *data);
 void		palette_two(t_data *data);
 void		change_color(t_data *data);
 void		palette_three(t_data *data);

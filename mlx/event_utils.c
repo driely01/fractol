@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 18:48:16 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/08/08 16:37:12 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/12/03 14:23:33 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 void	change_color(t_data *data)
 {
-	if (data->set_color == 5)
+	if (data->set_color == 6)
 		data->set_color = 1;
 	if (data->set_color == 1)
-		palette_org(data);
+		palette_cos(data);
 	else if (data->set_color == 2)
 		palette_one(data);
 	else if (data->set_color == 3)
 		palette_two(data);
 	else if (data->set_color == 4)
 		palette_three(data);
+	else if (data->set_color == 5)
+		palette_org(data);
 }
 
 void	draw_fractals(t_data *data)
@@ -46,7 +48,7 @@ void	switch_fractals(t_data *data)
 	{
 		data->type = "Sinusoidalmandelbrot";
 		data->zoom = WIDTH / 16;
-        data->left_right = 0;
+		data->left_right = 0;
 	}
 	else if (!ft_strcmp(data->type, "Sinusoidalmandelbrot"))
 	{

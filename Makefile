@@ -19,7 +19,7 @@ OBJ =  $(SRC:.c=.o)
 NAME = fractol
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -Ofast
 RM = rm -f
 
 COLOR = \033[0;36m
