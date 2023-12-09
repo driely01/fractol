@@ -6,7 +6,7 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 17:24:14 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/08/08 16:37:12 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/12/09 14:36:53 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ void	value_assignment(t_data *data)
 	data->left_right = 0;
 	data->top_down = 0;
 	data->set_color = 1;
+	data->power_n = 2;
+	data->iteration_n = 400.0;
 	data->mlx = mlx_init();
 	data->mlx_win = mlx_new_window(data->mlx, WIDTH, HEIGHT, "Fractol");
 }

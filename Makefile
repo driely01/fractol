@@ -8,6 +8,9 @@ SRC = fractol.c \
 		$(FRCTL)juliaset.c \
 		$(FRCTL)burningship.c \
 		$(FRCTL)bonus_of_bonus_part.c \
+		$(FRCTL)tricon.c \
+		$(FRCTL)sinfractal.c \
+		$(FRCTL)multimandlbrot3.c \
 		$(UTLS)ft_atof.c \
 		$(UTLS)fractol_useful_utils.c \
 		$(MLX)events.c \

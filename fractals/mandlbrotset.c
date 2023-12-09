@@ -6,13 +6,13 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 16:19:58 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/08/08 16:37:12 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/12/09 14:40:36 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fractol.h"
 
-int	mandlbrotset(long double x, long double y)
+int	mandlbrotset(t_data *data, long double x, long double y)
 {
 	int			n;
 	long double	a;
@@ -22,7 +22,7 @@ int	mandlbrotset(long double x, long double y)
 	n = 0;
 	a = x;
 	b = y;
-	while (n < NUM_ITR)
+	while (n < data->iteration_n)
 	{
 		tmp = a;
 		a = a * a - b * b + x;
@@ -33,14 +33,17 @@ int	mandlbrotset(long double x, long double y)
 	}
 	return (n);
 }
-
+#include <stdio.h>
 void	draw_mandlbrotset(t_data *data, int destroy)
 {
 	long double	x;
 	long double	y;
 
 	if (destroy == 1)
+	{
 		mlx_destroy_image(data->mlx, data->img);
+		mlx_clear_window(data->mlx, data->mlx_win);
+	}
 	data->img = mlx_new_image(data->mlx, 1200, 1200);
 	data->addr = mlx_get_data_addr(data->img, &data->bits_per_pixel,
 			&data->line_length, &data->endian);
@@ -50,7 +53,7 @@ void	draw_mandlbrotset(t_data *data, int destroy)
 		y = -1;
 		while (++y < HEIGHT)
 		{
-			data->c_itr = mandlbrotset((x - WIDTH / 2 + data->left_right)
+			data->c_itr = mandlbrotset(data, (x - WIDTH / 2 + data->left_right)
 					/ data->zoom, (y - HEIGHT / 2 + data->top_down)
 					/ data->zoom);
 			data->color = data->addr + ((int)x * (data->bits_per_pixel / 8)

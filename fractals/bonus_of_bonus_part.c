@@ -6,14 +6,14 @@
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:49:55 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/08/08 16:37:12 by del-yaag         ###   ########.fr       */
+/*   Updated: 2023/12/09 11:26:52 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fractol.h"
 
 //  Z(n + 1) = Zn * sin(Zn)
-static int	sinusoidal_mandelbrot(long double x, long double y)
+static int	sinusoidal_mandelbrot(t_data *data, long double x, long double y)
 {
 	int			n;
 	long double	a;
@@ -23,7 +23,7 @@ static int	sinusoidal_mandelbrot(long double x, long double y)
 	n = 0;
 	a = x;
 	b = y;
-	while (n < NUM_ITR)
+	while (n < data->iteration_n)
 	{
 		tmp = a;
 		a = ((tmp) * sin(tmp) * cosh(b) - (b) * cos(tmp) * sinh(b)) + x;
@@ -41,7 +41,10 @@ void	draw_sinusoidal_mandelbrot(t_data *data, int destroy)
 	long double	y;
 
 	if (destroy == 1)
+	{
 		mlx_destroy_image(data->mlx, data->img);
+		mlx_clear_window(data->mlx, data->mlx_win);
+	}
 	data->img = mlx_new_image(data->mlx, 1200, 1200);
 	data->addr = mlx_get_data_addr(data->img, &data->bits_per_pixel,
 			&data->line_length, &data->endian);
@@ -51,7 +54,7 @@ void	draw_sinusoidal_mandelbrot(t_data *data, int destroy)
 		y = -1;
 		while (++y < HEIGHT)
 		{
-			data->c_itr = sinusoidal_mandelbrot((x - WIDTH / 2
+			data->c_itr = sinusoidal_mandelbrot(data, (x - WIDTH / 2
 						+ data->left_right) / data->zoom,
 					(y - HEIGHT / 2 + data->top_down)
 					/ data->zoom);

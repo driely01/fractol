@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   burningship.c                                      :+:      :+:    :+:   */
+/*   multimandlbrot3.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: del-yaag <del-yaag@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/12 18:46:10 by del-yaag          #+#    #+#             */
-/*   Updated: 2023/12/09 12:49:51 by del-yaag         ###   ########.fr       */
+/*   Created: 2023/02/10 16:19:58 by del-yaag          #+#    #+#             */
+/*   Updated: 2023/12/09 11:26:07 by del-yaag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fractol.h"
 
-long double	ft_abs(long double x)
-{
-	if (x < 0)
-		return (-x);
-	else
-		return (x);
-}
-
-int	burningship(t_data *data, long double x, long double y)
+int	multibrot3(t_data *data, long double x, long double y)
 {
 	int			n;
 	long double	a;
@@ -33,16 +25,16 @@ int	burningship(t_data *data, long double x, long double y)
 	while (n < data->iteration_n)
 	{
 		tmp = a;
-		a = ft_abs(a * a - b * b + x);
-		b = ft_abs(2 * tmp * b) + y;
-		if (sqrt(a * a + b * b) > 2.0)
+		a = pow((pow(a, 2) + pow(b, 2)), (data->power_n / 2)) * cos(data->power_n * atan2(b, a)) + x;
+		b = pow((pow(tmp, 2) + pow(b, 2)), (data->power_n / 2)) * sin(data->power_n * atan2(b, tmp)) + y;
+		if (sqrt(a * a + b * b) > 20.0)
 			break ;
 		n++;
 	}
 	return (n);
 }
 
-void	draw_burningship(t_data *data, int destroy)
+void	draw_multibrot3(t_data *data, int destroy)
 {
 	long double	x;
 	long double	y;
@@ -61,7 +53,7 @@ void	draw_burningship(t_data *data, int destroy)
 		y = -1;
 		while (++y < HEIGHT)
 		{
-			data->c_itr = burningship(data, (x - WIDTH / 2 + data->left_right)
+			data->c_itr = multibrot3(data, (x - WIDTH / 2 + data->left_right)
 					/ data->zoom, (y - HEIGHT / 2 + data->top_down)
 					/ data->zoom);
 			data->color = data->addr + ((int)x * (data->bits_per_pixel / 8)
