@@ -61,7 +61,7 @@ https://fractalfoundation.org/OFC/OFC-5-5.html
 <img width="400" alt="Screen Shot 2023-08-09 at 4 51 38 PM" src="https://github.com/driely01/fractol/assets/41493879/a243677b-5dc5-4d13-a810-8963340da363">
 <img width="400" alt="Screen Shot 2023-08-09 at 4 52 14 PM" src="https://github.com/driely01/fractol/assets/41493879/8bf02871-8d4e-409a-ac9e-8baa4eb500bf">
 
-#### Other Fratals
+#### Other Fractals
 <img width="400" alt="Screen Shot 2023-12-19 at 9 07 23 PM" src="https://github.com/driely01/fractol/assets/41493879/98ec6675-7e2b-4589-836d-64f188296d5b">
 <img width="400" alt="Screen Shot 2023-12-19 at 9 07 34 PM" src="https://github.com/driely01/fractol/assets/41493879/04d9c2f9-c30f-4c65-8607-c990bca195cd">
 <img width="400" alt="Screen Shot 2023-12-19 at 9 07 54 PM" src="https://github.com/driely01/fractol/assets/41493879/3461c589-04ac-4d5e-9313-31f20174a3ef">
